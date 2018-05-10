@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"formFields"
+			],
+			[
+				"invalid",
+				"invalidEmails"
+			],
+			[
+				"person",
+				"personalize"
+			],
+			[
+				"addC",
+				"addClickTracking"
+			],
+			[
+				"recip",
+				"recipientSchema"
+			],
+			[
 				"redu",
 				"reducThunk"
 			],
@@ -16,18 +36,65 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/drorpoliak/projects/fullstack/server/index.js",
+			"file": "client/src/components/surveys/SurveyNew.js",
 			"settings":
 			{
-				"buffer_size": 568,
+				"buffer_size": 571,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "authReducer.js",
+			"file": "client/src/components/surveys/SurveyFormReview.js",
 			"settings":
 			{
-				"buffer_size": 207,
+				"buffer_size": 866,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/src/components/Header.js",
+			"settings":
+			{
+				"buffer_size": 1013,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/src/components/App.js",
+			"settings":
+			{
+				"buffer_size": 799,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nSublimeLinter\n-------------\n\n  SublimeLinter 4.4\n  =================\n  \n  Adds the \"name\" attribute to explicitly define the name of a linter.\n  \n  And some more or less minor bug fixes.\n\n  SublimeLinter 4.3\n  =================\n  \n  - Now shows the active/assigned linters in the status bar.\n    SL will show e.g. 'eslint(ok)' if there were no errors, or 'eslint(1|2)' when\n    there is 1 warning and 2 errors.\n    If there is a hard error with the configuration it will state 'eslint(erred)'.\n    The counters_template setting is still applied, but different than before.\n    Check the default settings for more information.\n  \n  - Introduces a new setting called 'kill_old_processes'. If set it to true,\n    SL will send a 'terminate' signal to processes when SL won't use its output.\n    Use this if you're using slow linters that seem to hang ST a lot.\n    Related PR: https://github.com/SublimeLinter/SublimeLinter/pull/1250\n  \n  - For OSX we now wait (up to 1 minute) until the env has been loaded by Sublime.\n    This should prevent issues with SL not finding the executables.\n    Note that dev builds of ST also fix this issue for us.\n    Related ST issue: https://github.com/SublimeTextIssues/Core/issues/1877\n  \n  - Fixed a bug where hovering would sometimes not open the right tooltip.\n  - Fixed the visualization of multi-line errors in tooltips.\n  - Fixed a bug where not all gutter icons were drawn.\n  \n  - The debounce delay before a lint in background mode will now be set\n    automatically based on how fast your computer and your linters actually are.\n  - Added an upper limit for how many lint processes can run in parallel.\n  - Much improved logging about what command SL actually runs.\n  \n  \n  For plugin developers\n  ----------------------\n  \n  BREAKING CHANGES:\n  - For STREAM_BOTH linters we will call 'linter.on_stderr()' automatically if\n    there is any output on 'stderr' and only pass 'stdout' down.\n    Set 'on_stderr = None' to disable.\n  - Removed 'util.popen()'\n  - Removed 'linter.build_options()'\n  \n  DEPRECATED:\n  - 'util.communicate' has been deprecated,\n    The functionality is now in 'self._communicate'.\n    If you need to quickly run a command, use 'util.check_output'\n  \n  NEW:\n  - New API: popen calls now return an object, not just a string of the output\n    with the typical members '.stdout/.stderr/returncode'.\n    For compatibility, only the new 'linter.parse_output(proc, virtual_view)'\n    actually sees this 'proc'.\n  - If the linter failed, call 'self.notify_failure()'.\n    You should additionally log the error either as an error or a warning.\n  - In the 'defaults' setting we now support flags like \"{'--stdin': True|False}\".\n    You can also define e.g. \"{'--include': ''}\" instead of \"{'--include:': ''}\".\n  - You can now get the linter settings via 'get_linter_settings(linter, view)'.\n",
+			"settings":
+			{
+				"buffer_size": 2897,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "client/src/components/surveys/formFields.js",
+			"settings":
+			{
+				"buffer_size": 193,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/src/components/surveys/SurveyForm.js",
+			"settings":
+			{
+				"buffer_size": 1320,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -116,25 +183,45 @@
 		"/Users/drorpoliak/projects/fullstack/server",
 		"/Users/drorpoliak/projects/fullstack/server/client",
 		"/Users/drorpoliak/projects/fullstack/server/client/src",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/actions",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components/surveys",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/reducers",
-		"/Users/drorpoliak/projects/fullstack/server/config",
-		"/Users/drorpoliak/projects/fullstack/server/routes",
-		"/Users/drorpoliak/projects/fullstack/server/services"
+		"/Users/drorpoliak/projects/fullstack/server/client/src/utils",
+		"/Users/drorpoliak/projects/fullstack/server/services",
+		"/Users/drorpoliak/projects/fullstack/server/services/emailTemplates"
 	],
 	"file_history":
 	[
-		"/Users/drorpoliak/projects/fullstack/server/client/src/actions/index.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components/surveys/SurveyField.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/utils/validateEmails.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/node_modules/react-scripts/config/webpack.config.dev.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/components/App.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/reducers/index.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components/Dashboard.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/public/index.html",
+		"/Users/drorpoliak/projects/fullstack/server/services/Mailer.js",
+		"/Users/drorpoliak/projects/fullstack/server/services/emailTemplates/surveyTemplate.js",
+		"/Users/drorpoliak/projects/fullstack/server/routes/surveyRoutes.js",
+		"/Users/drorpoliak/projects/fullstack/server/config/dev.js",
+		"/Users/drorpoliak/projects/fullstack/server/config/prod.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/index.js",
+		"/Users/drorpoliak/projects/fullstack/server/middlewares/requireCredits.js",
+		"/Users/drorpoliak/projects/fullstack/server/index.js",
+		"/Users/drorpoliak/projects/fullstack/server/models/Survey.js",
+		"/Users/drorpoliak/projects/fullstack/server/models/Recipient.js",
+		"/Users/drorpoliak/projects/fullstack/server/package.json",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components/Header.js",
+		"/Users/drorpoliak/projects/fullstack/server/routes/billingRoutes.js",
+		"/Users/drorpoliak/projects/fullstack/server/middlewares/requireLogin.js",
+		"/Users/drorpoliak/projects/fullstack/server/models/User.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/components/Payments.js",
+		"/Users/drorpoliak/projects/fullstack/server/client/src/actions/index.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/components/Landing.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/reducers/authReducer.js",
-		"/Users/drorpoliak/projects/fullstack/server/client/src/components/Header.js",
-		"/Users/drorpoliak/projects/fullstack/server/config/prod.js",
 		"/Users/drorpoliak/projects/fullstack/server/routes/authRoutes.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/actions/types.js",
-		"/Users/drorpoliak/projects/fullstack/server/config/dev.js",
-		"/Users/drorpoliak/projects/fullstack/server/client/src/index.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/package.json",
-		"/Users/drorpoliak/projects/fullstack/server/index.js",
 		"/Users/drorpoliak/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/drorpoliak/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/Users/drorpoliak/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
@@ -144,12 +231,9 @@
 		"/Users/drorpoliak/projects/fullstack/server/.gitignore",
 		"/Users/drorpoliak/projects/fullstack/server/package-lock.json",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/.eslintrc.json",
-		"/Users/drorpoliak/projects/fullstack/server/client/src/reducers/index.js",
 		"/Users/drorpoliak/projects/fullstack/server/services/passport.js",
-		"/Users/drorpoliak/projects/fullstack/server/package.json",
 		"/Users/drorpoliak/projects/fullstack/server/client/src/App.js",
 		"/Users/drorpoliak/projects/fullstack/server/client/build/index.html",
-		"/Users/drorpoliak/projects/fullstack/server/models/User.js",
 		"/Users/drorpoliak/projects/fullstack/server/config/keys.js",
 		"/Users/drorpoliak/Library/Application Support/Sublime Text 3/Packages/JsPrettier/JsPrettier.sublime-settings",
 		"/Users/drorpoliak/Library/Application Support/Sublime Text 3/Packages/User/JsPrettier.sublime-settings",
@@ -191,6 +275,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"exclude",
+			"babel",
+			"body",
+			"title"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -198,6 +286,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"emails",
+			"title",
+			"emails",
+			"body",
+			"subject"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -208,16 +301,90 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/drorpoliak/projects/fullstack/server/index.js",
+					"file": "client/src/components/surveys/SurveyNew.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 568,
+						"buffer_size": 571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								344
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"SL.259.region_keys":
+							[
+								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/src/components/surveys/SurveyFormReview.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								500,
+								500
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"SL.277.region_keys":
+							[
+								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/src/components/Header.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1013,
 						"regions":
 						{
 						},
@@ -230,10 +397,59 @@
 						],
 						"settings":
 						{
-							"SL.76.region_keys":
+							"SL.16.region_keys":
 							[
 							],
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"SL.300.region_keys":
+							[
+								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"sublime_linter.protected_regions",
+								"SL.eslint_d.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
+								"SL.eslint_d.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 129.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/src/components/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"SL.299.region_keys":
+							[
+								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"sublime_linter.protected_regions",
+								"SL.eslint_d.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
+								"SL.eslint_d.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -243,31 +459,60 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "authReducer.js",
-					"semi_transient": true,
+					"buffer": 4,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 207,
+						"buffer_size": 2897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								207,
-								207
+								2897,
+								2897
 							]
 						],
 						"settings":
 						{
-							"SL.84.region_keys":
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/src/components/surveys/formFields.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								"SL.eslint_d.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
-								"SL.eslint_d.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
-								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
-								"sublime_linter.protected_regions",
-								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32"
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"SL.18.region_keys":
+							[
+							],
+							"SL.288.region_keys":
+							[
+								"sublime_linter.protected_regions"
 							],
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
@@ -275,7 +520,44 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/src/components/surveys/SurveyForm.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								800,
+								800
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"SL.261.region_keys":
+							[
+								"SL.eslint.Highlights.|region.redish markup.deleted.sublime_linter markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.region.redish markup.deleted.sublime_linter markup.error.sublime_linter.dot",
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 19.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -316,6 +598,10 @@
 	{
 		"height": 0.0
 	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 120.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -333,6 +619,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"app",
+				"client/src/components/App.js"
+			],
+			[
+				"webpack",
+				"client/node_modules/react-scripts/config/webpack.config.dev.js"
+			],
 			[
 				"inde",
 				"index.js"
@@ -352,10 +646,6 @@
 			[
 				"",
 				"client/src/reducers/index.js"
-			],
-			[
-				"app",
-				"client/src/components/App.js"
 			],
 			[
 				"index",
@@ -394,7 +684,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 183.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
